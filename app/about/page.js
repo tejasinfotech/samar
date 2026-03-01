@@ -7,12 +7,28 @@ export const metadata = {
 }
 
 export default function About() {
-  const timeline = [
-    { year: '2009', event: 'Company Founded', description: 'Started with a vision to supply quality industrial minerals' },
-    { year: '2014', event: 'Expanded Product Line', description: 'Added wooden boxes and pallets to our portfolio' },
-    { year: '2018', event: 'International Growth', description: 'Began exporting to international markets' },
-    { year: '2024', event: 'Market Leader', description: 'Serving 500+ clients globally with premium products' },
-  ]
+ const timeline = [
+  { 
+    year: '2014', 
+    event: 'Company Founded', 
+    description: 'Started with a vision to supply quality industrial minerals and wooden products' 
+  },
+  { 
+    year: '2017', 
+    event: 'Expanded Product Line', 
+    description: 'Added wooden boxes, pallets, and custom packaging solutions' 
+  },
+  { 
+    year: '2020', 
+    event: 'National Expansion', 
+    description: 'Expanded distribution network across multiple states' 
+  },
+  { 
+    year: '2024', 
+    event: 'Global Presence', 
+    description: 'Serving 500+ clients with premium products and reliable service' 
+  },
+]
 
   const team = [
     { name: 'John Anderson', role: 'Founder & CEO', experience: '25+ years' },
@@ -37,11 +53,10 @@ export default function About() {
                 Our Story
               </span>
               <h2 className="text-4xl font-bold text-primary mb-6">
-                15 Years of Excellence
+                10+ Years of Excellence
               </h2>
               <p className="text-lg text-muted-foreground mb-4">
-                Founded in 2009, we started with a simple mission: to supply high-quality industrial minerals and wooden products to businesses across the globe. What began as a small operation has grown into a trusted partner for hundreds of clients.
-              </p>
+Founded in 2014, we started with a simple mission: to supply high-quality industrial minerals and wooden products to businesses across the globe. What began as a focused operation has grown into a trusted partner for hundreds of clients across multiple industries.              </p>
               <p className="text-lg text-muted-foreground mb-6">
                 Our commitment to quality, reliability, and exceptional customer service has been the foundation of our success. We continuously invest in technology, training, and infrastructure to maintain our position as an industry leader.
               </p>
@@ -137,7 +152,7 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-muted/30">
+      {/* <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4 animate-fade-in-up">
@@ -164,7 +179,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section className="py-20 bg-primary text-primary-foreground">

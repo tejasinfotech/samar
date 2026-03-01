@@ -1,33 +1,32 @@
-'use client'
+"use client";
 
-import PageHeader from '@/components/PageHeader'
+import PageHeader from "@/components/PageHeader";
 
 export default function Contact() {
-
   const contactInfo = [
     {
-      icon: '📧',
-      title: 'Email Us',
-      details: 'vikram.kd555@gmail.com',
-      subtext: 'We reply within 24 hours',
+      icon: "📧",
+      title: "Email Us",
+      details: "vikram.kd555@gmail.com",
+      subtext: "We reply within 24 hours",
     },
     {
-      icon: '📞',
-      title: 'Call Us',
-      details: '9166416666 / 9376887777',
-      subtext: 'Mon - Sat | 9 AM - 7 PM',
+      icon: "📞",
+      title: "Call Us",
+      details: "9166416666 / 9376887777",
+      subtext: "Mon - Sat | 9 AM - 7 PM",
     },
     {
-      icon: '📍',
-      title: 'Location',
-      details: 'Alwar, Rajasthan',
-      subtext: 'Click map below for directions',
+      icon: "📍",
+      title: "Location",
+      details: "Kotputli, Rajasthan",
+      subtext: "Click below to explore our location on the map",
     },
-  ]
+  ];
 
   return (
     <div>
-      <PageHeader 
+      <PageHeader
         title="Contact Us"
         subtitle="We’re here to help and answer any questions you may have"
       />
@@ -48,9 +47,7 @@ export default function Contact() {
                 <p className="text-lg font-semibold text-accent mb-2">
                   {info.details}
                 </p>
-                <p className="text-sm text-muted-foreground">
-                  {info.subtext}
-                </p>
+                <p className="text-sm text-muted-foreground">{info.subtext}</p>
               </div>
             ))}
           </div>
@@ -92,7 +89,8 @@ export default function Contact() {
             Need Immediate Assistance?
           </h2>
           <p className="text-muted-foreground mb-6">
-            Call us directly or send an email. Our team will be happy to assist you.
+            Call us directly or send an email. Our team will be happy to assist
+            you.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -113,5 +111,5 @@ export default function Contact() {
         </div>
       </section>
     </div>
-  )
+  );
 }

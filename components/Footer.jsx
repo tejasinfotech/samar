@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
           <div className="animate-fade-in-up md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
@@ -61,28 +61,31 @@ export default function Footer() {
                 <span className="text-secondary mt-0.5">📧</span>
                 <div>
                   <p className="text-white/70 font-medium">Email</p>
-                  <a href="mailto:info@samarexports.com" className="text-secondary hover:text-accent transition-colors font-semibold">info@samarexports.com</a>
+                  <a href="mailto:info@samarexports.com" className="text-secondary hover:text-accent transition-colors font-semibold">vikram.kd555@gmail.com</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-secondary mt-0.5">📱</span>
                 <div>
                   <p className="text-white/70 font-medium">Phone</p>
-                  <a href="tel:+1234567890" className="text-secondary hover:text-accent transition-colors font-semibold">+1 (234) 567-890</a>
+                  <a href="tel:91664 16666" className="text-secondary hover:text-accent transition-colors font-semibold">
+                    91664 16666
+
+                  </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-secondary mt-0.5">📍</span>
                 <div>
                   <p className="text-white/70 font-medium">Location</p>
-                  <p className="text-secondary">Industrial District, Mumbai</p>
+                  <p className="text-secondary">Keshwana, Kotputli </p>
                 </div>
               </li>
             </ul>
           </div>
 
           {/* Newsletter */}
-          <div className="animate-fade-in-up stagger-4">
+          {/* <div className="animate-fade-in-up stagger-4">
             <h4 className="font-bold mb-6 text-sm tracking-wider">NEWSLETTER</h4>
             <p className="text-sm text-white/70 mb-4 font-medium">Subscribe for updates and offers</p>
             <form className="flex flex-col gap-3">
@@ -98,7 +101,7 @@ export default function Footer() {
                 Subscribe
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}
