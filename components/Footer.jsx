@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-primary to-primary/95 text-white mt-32 relative">
+    <footer className="bg-black text-white  relative">
       {/* Decorative top accent */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary to-transparent"></div>
 
