@@ -1,8 +1,6 @@
-import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import FeaturesSection from '@/components/FeaturesSection'
 import CategoriesSection from '@/components/CategoriesSection'
-import ManPowerSection from '@/components/ManPowerSection'
 import CTASection from '@/components/CTASection'
 
 export const metadata = {
@@ -16,7 +14,6 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <CategoriesSection />
-      <ManPowerSection />
       <CTASection />
     </div>
   )

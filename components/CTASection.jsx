@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function CTASection() {
   return (
-    <section className="py-32 bg-gradient-to-br from-primary via-primary to-primary/95 text-white relative overflow-hidden">
+    <section className="py-20 sm:py-24 bg-gradient-to-br from-primary via-primary to-primary/95 text-white relative overflow-hidden">
       {/* Premium decorative elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
@@ -10,23 +10,23 @@ export default function CTASection() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
-          <div className="mb-8 inline-block animate-fade-in-up">
+          <div className="mb-6 inline-block animate-fade-in-up">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white px-4 py-2 rounded-full text-xs font-bold tracking-wider border border-white/20">
               <span className="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
               READY TO GROW YOUR BUSINESS?
             </div>
           </div>
 
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 animate-fade-in-up stagger-1 leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up stagger-1 leading-tight">
             Partner With
             <span className="block text-secondary">SAMAR EXPORTS</span>
           </h2>
 
-          <p className="text-lg text-white/90 mb-12 max-w-3xl mx-auto animate-fade-in-up stagger-2 font-medium leading-relaxed">
+          <p className="text-lg text-white/90 mb-8 max-w-3xl mx-auto animate-fade-in-up stagger-2 font-medium leading-relaxed">
             Get premium industrial minerals and wooden products delivered to your door. Our expert team is ready to provide tailored solutions for your business needs.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-up stagger-3">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 animate-fade-in-up stagger-3">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 bg-secondary text-primary px-10 py-4 rounded-lg font-bold hover:bg-accent transition-all duration-300 hover:shadow-2xl hover:shadow-secondary/40 text-center group"
