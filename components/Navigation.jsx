@@ -2,10 +2,12 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
   const navItems = [
     { label: 'Home', href: '/' },
@@ -14,6 +16,10 @@ export default function Navigation() {
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
   ]
+
+  const isActiveRoute = (href) => (
+    href === '/' ? pathname === '/' : pathname.startsWith(href)
+  )
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-sm border-b border-border">
@@ -26,34 +32,45 @@ export default function Navigation() {
           >
             <div className=" flex items-center justify-center">
               <Image
-                src="/logo.webp"
+                src="/newlogo.png"
                 alt="Samar Export Logo"
                 width={200}
                 height={80}
-                className="w-32 sm:w-36 md:w-40 h-auto object-contain"
+                className=" w-[280px] h-[70px] object-contain"
               />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-12">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm font-semibold text-foreground relative group transition-colors duration-300 hover:text-primary"
-              >
-                {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-500 group-hover:w-full"></span>
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = isActiveRoute(item.href)
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm font-semibold relative group transition-colors duration-300 hover:text-primary ${
+                    isActive ? 'text-primary' : 'text-foreground'
+                  }`}
+                >
+                  {item.label}
+                  <span className={`absolute -bottom-2 left-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-500 ${
+                    isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}></span>
+                </Link>
+              )
+            })}
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <button className="px-6 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+            <Link
+              href="/contact"
+              className="px-6 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+            >
               Get Quote
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -70,19 +87,29 @@ export default function Navigation() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pb-6 animate-slide-in-down border-t border-border">
-            {navItems.map((item, index) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className={`block py-3 px-4 text-foreground font-semibold hover:text-primary hover:bg-background/50 rounded-lg transition-all animate-fade-in-left stagger-${index + 1}`}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <button className="w-full mt-4 px-6 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300">
+            {navItems.map((item, index) => {
+              const isActive = isActiveRoute(item.href)
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`block py-3 px-4 font-semibold hover:text-primary hover:bg-background/50 rounded-lg transition-all animate-fade-in-left stagger-${index + 1} ${
+                    isActive ? 'bg-primary/5 text-primary' : 'text-foreground'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )
+            })}
+            <Link
+              href="/contact"
+              onClick={() => setIsOpen(false)}
+              className="block w-full mt-4 px-6 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 text-center"
+            >
               Get Quote
-            </button>
+            </Link>
           </div>
         )}
       </div>
