@@ -32,7 +32,7 @@ export default function Navigation() {
           >
             <div className=" flex items-center justify-center">
               <Image
-                src="/newlogo.png"
+                src="/3d.svg"
                 alt="Samar Export Logo"
                 width={200}
                 height={80}
@@ -50,14 +50,12 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-sm font-semibold relative group transition-colors duration-300 hover:text-primary ${
-                    isActive ? 'text-primary' : 'text-foreground'
-                  }`}
+                  className={`text-sm font-semibold relative group transition-colors duration-300 hover:text-primary ${isActive ? 'text-primary' : 'text-foreground'
+                    }`}
                 >
                   {item.label}
-                  <span className={`absolute -bottom-2 left-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-500 ${
-                    isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}></span>
+                  <span className={`absolute -bottom-2 left-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-500 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}></span>
                 </Link>
               )
             })}
@@ -95,9 +93,8 @@ export default function Navigation() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block py-3 px-4 font-semibold hover:text-primary hover:bg-background/50 rounded-lg transition-all animate-fade-in-left stagger-${index + 1} ${
-                    isActive ? 'bg-primary/5 text-primary' : 'text-foreground'
-                  }`}
+                  className={`block py-3 px-4 font-semibold hover:text-primary hover:bg-background/50 rounded-lg transition-all animate-fade-in-left stagger-${index + 1} ${isActive ? 'bg-primary/5 text-primary' : 'text-foreground'
+                    }`}
                 >
                   {item.label}
                 </Link>
